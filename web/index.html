@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Interactive generative map-poster renderer by Joseph Hernandez."><title>Map Poster Generator</title><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head><body>
+  <header><a href="/">← Joseph Hernandez</a><span>CLIENT-SIDE RENDERER</span><a href="https://github.com/josephmhernandez/map-poster-generator">Source ↗</a></header>
+  <main>
+    <section class="intro"><p class="eyebrow">LYFE CAPTURES × TILE ENGINE</p><h1>Turn a place into a print.</h1><p>A lightweight public demo of the rendering pipeline behind my map projects. Choose a location, style the composition, and export a poster—all in the browser.</p></section>
+    <section class="studio">
+      <aside class="controls">
+        <div class="control-head"><small>POSTER CONTROLS</small><button id="randomize">Randomize</button></div>
+        <label>Location<select id="city"><option value="austin">Austin, Texas</option><option value="seattle">Seattle, Washington</option><option value="chicago">Chicago, Illinois</option><option value="brooklyn">Brooklyn, New York</option><option value="santa-fe">Santa Fe, New Mexico</option><option value="honolulu">Honolulu, Hawaii</option></select></label>
+        <label>Title<input id="title" maxlength="30" value="AUSTIN"></label>
+        <label>Subtitle<input id="subtitle" maxlength="48" value="30.2672° N · 97.7431° W"></label>
+        <fieldset><legend>Visual style</legend><div class="swatches"><button class="swatch active" data-style="midnight" aria-label="Midnight"><i></i>Midnight</button><button class="swatch" data-style="paper" aria-label="Paper"><i></i>Paper</button><button class="swatch" data-style="ruby" aria-label="Ruby"><i></i>Ruby</button><button class="swatch" data-style="ocean" aria-label="Ocean"><i></i>Ocean</button></div></fieldset>
+        <fieldset><legend>Format</legend><div class="segments"><button class="active" data-format="portrait">Portrait</button><button data-format="landscape">Landscape</button></div></fieldset>
+        <label class="check"><input id="pin" type="checkbox" checked><span>Show location marker</span></label>
+        <button id="download" class="primary">Download PNG <span>↓</span></button>
+        <p class="hint">The export is rendered locally. No image or location data is uploaded.</p>
+      </aside>
+      <section class="preview"><div class="poster-frame"><canvas id="poster" width="900" height="1200"></canvas></div><div class="pipeline"><span>Coordinate seed</span><b>→</b><span>Road graph</span><b>→</b><span>Style pass</span><b>→</b><span>Typography</span><b>→</b><span>PNG</span></div></section>
+    </section>
+  </main>
+</body></html>
