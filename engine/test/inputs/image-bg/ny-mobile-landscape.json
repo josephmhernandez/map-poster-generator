@@ -1,0 +1,116 @@
+[
+  {
+    "pinList": [
+      {
+        "id": "955e5877-1731-44ee-8306-36107a43025e",
+        "size": 40,
+        "style": "heart-black-white",
+        "position": { "lat": 40.67794079953362, "lng": -73.82630109786989 }
+      },
+      {
+        "id": "7e3d79ea-0428-4aa4-bb59-02792bb0e0b6",
+        "size": 25,
+        "style": "heart-black-white",
+        "position": { "lat": 40.76646095035229, "lng": -73.98882150650026 }
+      }
+    ],
+    "location": "",
+    "center": [40.73061, -73.935242],
+    "zoom": 10,
+    "orientation": "portrait",
+    "textPrimary": "",
+    "textSecondary": "",
+    "textCoordinates": "N 40°40'40.59\" W 73°49'34.68\"",
+    "styling": "basic",
+    "size": "_24_36_demo",
+    "tileLayer": "flag-back",
+    "bbox": "{\"_southWest\":{\"lat\":40.561807971278185,\"lng\":-74.08355712890626},\"_northEast\":{\"lat\":40.898981853950986,\"lng\":-73.78692626953126}}",
+    "tileZoomOffset": 3,
+    "bgImgCode": "usa",
+    "quantity": 1,
+    "description": "Map near 37 Railroad Ave, Queens, NY 11101, USA",
+    "id": "bad627e7-39b4-4821-b339-227d70e0ae5e",
+    "name": "Personalized Map",
+    "unitPrice": 499,
+    "lineItemId": [
+      {
+        "id": "item_7RyWOwmK5nEa2V",
+        "product_id": "prod_VKXmwDy717orgD",
+        "name": "Personalized Map",
+        "product_name": "Personalized Map",
+        "sku": null,
+        "permalink": "qNG91W",
+        "quantity": 2,
+        "price": {
+          "raw": 499,
+          "formatted": "499.00",
+          "formatted_with_symbol": "$499.00",
+          "formatted_with_code": "499.00 USD"
+        },
+        "line_total": {
+          "raw": 998,
+          "formatted": "998.00",
+          "formatted_with_symbol": "$998.00",
+          "formatted_with_code": "998.00 USD"
+        },
+        "is_valid": true,
+        "product_meta": [],
+        "selected_options": [],
+        "variant": null,
+        "image": {
+          "id": "ast_yA6nldR94goEWb",
+          "url": "https://cdn.chec.io/merchants/47490/assets/CjaynbQmf8IB1ml3|text-close-up.jpg",
+          "description": null,
+          "is_image": true,
+          "filename": "text-close-up.jpg",
+          "file_size": 356984,
+          "file_extension": "jpg",
+          "image_dimensions": { "width": 2000, "height": 1000 },
+          "meta": [],
+          "created_at": 1679717075,
+          "updated_at": 1679717076
+        },
+        "tax": null
+      }
+    ],
+    "isTransparentTextBlock": false,
+    "text_styling_specs": {
+      "id": "flag-back",
+      "iconImg": "/tan-ocean.png",
+      "url": "https://api.maptiler.com/maps/11489910-a9d8-4e58-a989-e00a490cf934/{z}/{x}/{y}.jpg?key=fLxXsh3K0MP3y21i3bJs",
+      "isOverlay": true,
+      "text": {
+        "fontFamily": {
+          "primary": "Semplicita",
+          "secondary": "Semplicita",
+          "coordinate": "Semplicita"
+        },
+        "size": { "primary": "24", "secondary": "12", "coordinate": "8" },
+        "size_demo": { "primary": "8", "secondary": "4", "coordinate": "3" },
+        "color": {
+          "background": "#000000",
+          "primary": "#FFFFFF",
+          "secondary": "#FFFFFF",
+          "coordinate": "#FFFFFF"
+        },
+        "color_transparent": {
+          "background": "#0000",
+          "primary": "#000000",
+          "secondary": "#000000",
+          "coordinate": "#000000"
+        },
+        "textBlock": { "padding": "8px", "rounded": "8px", "spacing": "1" },
+        "text_block_demo": {
+          "padding": "1px",
+          "rounded": "3px",
+          "spacing": "1"
+        }
+      }
+    },
+    "mapDimensionsIn": {
+      "map_width": 24,
+      "map_height": 36,
+      "map_pixel_multiplier": 9
+    }
+  }
+]

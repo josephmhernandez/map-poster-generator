@@ -1,0 +1,70 @@
+[
+  {
+    "pinList": [
+      {
+        "id": "70caf84d-37b6-4fa6-b4d7-22ff44c958d1",
+        "size": 40,
+        "style": "heart-black-white",
+        "position": { "lat": 40.58475654701271, "lng": -74.10690307617189 }
+      }
+    ],
+    "location": "",
+    "center": [40.64521960545377, -74.04922485351564],
+    "zoom": 10,
+    "orientation": "landscape",
+    "textPrimary": "",
+    "textSecondary": "",
+    "textCoordinates": "N 40°35'5.12\" W 74°6'24.85\"",
+    "styling": "basic",
+    "size": "_24_36_demo",
+    "tileLayer": "dark-transit",
+    "bbox": "{\"_southWest\":{\"lat\":40.53258931069557,\"lng\":-74.27169799804689},\"_northEast\":{\"lat\":40.75766014997032,\"lng\":-73.82675170898439}}",
+    "tileZoomOffset": 3,
+    "quantity": 1,
+    "description": "",
+    "id": "d72b4e30-e9d0-4d3a-9a64-ce6518aed6ec",
+    "isTransparentTextBlock": true,
+    "text_styling_specs": {
+      "id": "dark-transit",
+      "iconImg": "/blackWhiteSquareIcon.svg",
+      "url": "https://api.maptiler.com/maps/265e1571-5b2a-47cf-bdf4-0f78abaefb47/{z}/{x}/{y}.png?key=fLxXsh3K0MP3y21i3bJs",
+      "text": {
+        "fontFamily": {
+          "primary": "Semplicita",
+          "secondary": "Semplicita",
+          "coordinate": "Semplicita"
+        },
+        "size": { "primary": "24", "secondary": "12", "coordinate": "8" },
+        "size_demo": { "primary": "8", "secondary": "4", "coordinate": "2" },
+        "color": {
+          "background": "#FFFFFF",
+          "primary": "#000000",
+          "secondary": "#000000",
+          "coordinate": "#000000"
+        },
+        "color_transparent": {
+          "background": "#0000",
+          "primary": "#FFFFFF",
+          "secondary": "#FFFFFF",
+          "coordinate": "#FFFFFF"
+        },
+        "textBlock": { "padding": "8px", "rounded": "8px", "spacing": "1" },
+        "text_block_demo": {
+          "padding": "1px",
+          "rounded": "3px",
+          "spacing": "1"
+        }
+      }
+    },
+    "mapDimensionsIn": {
+      "map_width": 36,
+      "map_height": 24,
+      "map_pixel_multiplier": 9
+    },
+    "nameTheMap": "ny-black-2",
+    "emailToSend": "josephmhernandez15@gmail.com",
+    "isSquare": false,
+    "whiteToXHexCode": "",
+    "blackToXHexCode": ""
+  }
+]

@@ -1,0 +1,108 @@
+[
+  {
+    "pinList": [
+      {
+        "id": "d84fa814-4a69-4387-be79-192fae2cbe7d",
+        "size": 40,
+        "style": "circle-white-black",
+        "position": { "lat": 40.71083299030839, "lng": -73.97918701171876 }
+      }
+    ],
+    "location": "",
+    "center": [40.69781959724633, -74.00527954101564],
+    "zoom": 11,
+    "orientation": "portrait",
+    "textPrimary": "prim text",
+    "textSecondary": "sec text",
+    "textCoordinates": "N 40°42'39\" W 73°58'45.07\"",
+    "styling": "basic",
+    "size": "_24_36_demo",
+    "tileLayer": "dark-transit",
+    "bbox": "{\"_southWest\":{\"lat\":40.613431197731956,\"lng\":-74.07943725585939},\"_northEast\":{\"lat\":40.78210123234386,\"lng\":-73.93112182617189}}",
+    "tileZoomOffset": 3,
+    "quantity": 1,
+    "description": "Map of prim text",
+    "id": "d19ab82d-ef12-4764-8f2b-9e7066133be4",
+    "name": "Personalized Map",
+    "unitPrice": 499,
+    "lineItemId": [
+      {
+        "id": "item_7RyWOwmK5nEa2V",
+        "product_id": "prod_VKXmwDy717orgD",
+        "name": "Personalized Map",
+        "product_name": "Personalized Map",
+        "sku": null,
+        "permalink": "qNG91W",
+        "quantity": 8,
+        "price": {
+          "raw": 499,
+          "formatted": "499.00",
+          "formatted_with_symbol": "$499.00",
+          "formatted_with_code": "499.00 USD"
+        },
+        "line_total": {
+          "raw": 3992,
+          "formatted": "3,992.00",
+          "formatted_with_symbol": "$3,992.00",
+          "formatted_with_code": "3,992.00 USD"
+        },
+        "is_valid": true,
+        "product_meta": [],
+        "selected_options": [],
+        "variant": null,
+        "image": {
+          "id": "ast_yA6nldR94goEWb",
+          "url": "https://cdn.chec.io/merchants/47490/assets/CjaynbQmf8IB1ml3|text-close-up.jpg",
+          "description": null,
+          "is_image": true,
+          "filename": "text-close-up.jpg",
+          "file_size": 356984,
+          "file_extension": "jpg",
+          "image_dimensions": { "width": 2000, "height": 1000 },
+          "meta": [],
+          "created_at": 1679717075,
+          "updated_at": 1679717076
+        },
+        "tax": null
+      }
+    ],
+    "isTransparentTextBlock": false,
+    "text_styling_specs": {
+      "id": "dark-transit",
+      "iconImg": "/blackWhiteSquareIcon.svg",
+      "url": "https://api.maptiler.com/maps/265e1571-5b2a-47cf-bdf4-0f78abaefb47/{z}/{x}/{y}.png?key=fLxXsh3K0MP3y21i3bJs",
+      "text": {
+        "fontFamily": {
+          "primary": "Semplicita",
+          "secondary": "Semplicita",
+          "coordinate": "Semplicita"
+        },
+        "size": { "primary": "24", "secondary": "12", "coordinate": "8" },
+        "size_demo": { "primary": "8", "secondary": "4", "coordinate": "2" },
+        "color": {
+          "background": "#FFFFFF",
+          "primary": "#000000",
+          "secondary": "#000000",
+          "coordinate": "#000000"
+        },
+        "color_transparent": {
+          "background": "#0000",
+          "primary": "#FFFFFF",
+          "secondary": "#FFFFFF",
+          "coordinate": "#FFFFFF"
+        },
+        "textBlock": { "padding": "8px", "rounded": "8px", "spacing": "1" },
+        "text_block_demo": {
+          "padding": "1px",
+          "rounded": "3px",
+          "spacing": "1"
+        }
+      }
+    },
+    "mapDimensionsIn": {
+      "map_width": 24,
+      "map_height": 36,
+      "map_pixel_multiplier": 9
+    }
+  }
+]

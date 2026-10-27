@@ -1,0 +1,14 @@
+{
+    "borders": [
+        {
+            "width": 2,
+            "color": "hex",
+            "order": 1
+        },
+        {
+            "width": 4,
+            "color": "hex",
+            "order": 2
+        }
+    ]
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "pinList": [
+      {
+        "id": "01da5e73-d250-4ddb-8f2d-38500ebc2fb0",
+        "size": 40,
+        "style": "beach-white-black",
+        "position": { "lat": 32.83834682084935, "lng": -96.7236328125 }
+      }
+    ],
+    "center": [32.7766642, -96.79698789999999],
+    "zoom": 12,
+    "orientation": "portrait",
+    "textPrimary": "Dallas",
+    "textSecondary": "TX, USA",
+    "textCoordinates": "N 32°50'18.05\" W 96°43'25.08\"",
+    "styling": "basic",
+    "size": "_24_36",
+    "tileLayer": "city-lights",
+    "bbox": "{\"_southWest\":{\"lat\":32.65700859449493,\"lng\":-96.89186096191406},\"_northEast\":{\"lat\":32.89602028969533,\"lng\":-96.70234680175781}}",
+    "tileZoomOffset": 2,
+    "quantity": 1,
+    "description": "Map of Dallas",
+    "id": "ca6b7c65-67c8-4707-a860-156e282deaa3",
+    "name": "Personalized Map",
+    "unitPrice": 499,
+    "lineItemId": [
+      {
+        "id": "item_7RyWOwmK5nEa2V",
+        "product_id": "prod_VKXmwDy717orgD",
+        "name": "Personalized Map",
+        "product_name": "Personalized Map",
+        "sku": null,
+        "permalink": "qNG91W",
+        "quantity": 9,
+        "price": {
+          "raw": 499,
+          "formatted": "499.00",
+          "formatted_with_symbol": "$499.00",
+          "formatted_with_code": "499.00 USD"
+        },
+        "line_total": {
+          "raw": 4491,
+          "formatted": "4,491.00",
+          "formatted_with_symbol": "$4,491.00",
+          "formatted_with_code": "4,491.00 USD"
+        },
+        "is_valid": true,
+        "product_meta": [],
+        "selected_options": [],
+        "variant": null,
+        "image": {
+          "id": "ast_yA6nldR94goEWb",
+          "url": "https://cdn.chec.io/merchants/47490/assets/CjaynbQmf8IB1ml3|text-close-up.jpg",
+          "description": null,
+          "is_image": true,
+          "filename": "text-close-up.jpg",
+          "file_size": 356984,
+          "file_extension": "jpg",
+          "image_dimensions": { "width": 2000, "height": 1000 },
+          "meta": [],
+          "created_at": 1679717075,
+          "updated_at": 1679717076
+        },
+        "tax": null
+      }
+    ],
+    "isTransparentTextBlock": false,
+    "text_styling_specs": {
+      "id": "city-lights",
+      "iconImg": "/city-lights.png",
+      "url": "https://api.maptiler.com/maps/70207988-ec48-4dce-8172-230ff9375b7d/{z}/{x}/{y}.png?key=fLxXsh3K0MP3y21i3bJs",
+      "text": {
+        "fontFamily": {
+          "primary": "Semplicita",
+          "secondary": "Semplicita",
+          "coordinate": "Semplicita"
+        },
+        "size": { "primary": "24", "secondary": "12", "coordinate": "8" },
+        "size_demo": { "primary": "8", "secondary": "4", "coordinate": "2" },
+        "color": {
+          "background": "#000000",
+          "primary": "#ffd900",
+          "secondary": "#ffd900",
+          "coordinate": "#ffd900"
+        },
+        "color_transparent": {
+          "background": "#0000",
+          "primary": "#ffd900",
+          "secondary": "#ffd900",
+          "coordinate": "#ffd900"
+        },
+        "textBlock": { "padding": "8px", "rounded": "8px", "spacing": "1" },
+        "text_block_demo": {
+          "padding": "1px",
+          "rounded": "8px",
+          "spacing": "1"
+        }
+      }
+    },
+    "mapDimensionsIn": {
+      "map_width": 24,
+      "map_height": 36,
+      "map_pixel_multiplier": 23
+    }
+  }
+]

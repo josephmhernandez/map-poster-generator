@@ -1,0 +1,102 @@
+[
+  {
+    "pinList": [
+      {
+        "id": "8a61c821-a90f-4125-9e0a-5d98e5dae9ef",
+        "size": 40,
+        "style": "heart-black-white",
+        "position": { "lat": 42.343320316410804, "lng": -83.01818847656251 }
+      }
+    ],
+    "center": [24.903876070498175, -81.01867675781251],
+    "zoom": 9,
+    "orientation": "landscape",
+    "textPrimary": "Florida Keys",
+    "textSecondary": "Florida, USA",
+    "textCoordinates": "N 24°54'13.95\" W 81°1'7.24\"",
+    "styling": "basic",
+    "size": "_24_36",
+    "tileLayer": "ocean-tan",
+    "bbox": "{\"_southWest\":{\"lat\":24.214404632762758,\"lng\":-82.15576171875},\"_northEast\":{\"lat\":25.58951703179726,\"lng\":-79.88159179687501}}",
+    "tileZoomOffset": "2",
+    "quantity": 1,
+    "description": "Map of Florida Keys",
+    "id": "aa385843-6b94-4812-842f-ea85209fa1e2",
+    "name": "Personalized Map",
+    "unitPrice": 699,
+    "lineItemId": [
+      {
+        "id": "item_7RyWOwmK5nEa2V",
+        "product_id": "prod_VKXmwDy717orgD",
+        "name": "Personalized Map",
+        "product_name": "Personalized Map",
+        "sku": null,
+        "permalink": "qNG91W",
+        "quantity": 3,
+        "price": {
+          "raw": 699,
+          "formatted": "699.00",
+          "formatted_with_symbol": "$699.00",
+          "formatted_with_code": "699.00 USD"
+        },
+        "line_total": {
+          "raw": 2097,
+          "formatted": "2,097.00",
+          "formatted_with_symbol": "$2,097.00",
+          "formatted_with_code": "2,097.00 USD"
+        },
+        "is_valid": true,
+        "product_meta": [],
+        "selected_options": [],
+        "variant": null,
+        "image": {
+          "id": "ast_zkK6oL4p3VoXn0",
+          "url": "https://cdn.chec.io/merchants/47490/assets/bRdYbK5ondeqWnwt|prod-pic-commerce.png",
+          "description": null,
+          "is_image": true,
+          "filename": "prod-pic-commerce.png",
+          "file_size": 676402,
+          "file_extension": "png",
+          "image_dimensions": { "width": 800, "height": 800 },
+          "meta": [],
+          "created_at": 1674768264,
+          "updated_at": 1674768267
+        },
+        "tax": null
+      }
+    ],
+    "isTransparentTextBlock": true,
+    "styling_specs": {},
+    "text_styling_specs": {
+      "id": "ocean-tan",
+      "iconImg": "/tan-ocean.png",
+      "url": "https://api.maptiler.com/maps/cd852295-1a11-4a53-a22b-995b2ded0e62/{z}/{x}/{y}.png?key=fLxXsh3K0MP3y21i3bJs",
+      "text": {
+        "fontFamily": {
+          "primary": "Semplicita",
+          "secondary": "Semplicita",
+          "coordinate": "Semplicita"
+        },
+        "size": { "primary": "24", "secondary": "12", "coordinate": "8" },
+        "color": {
+          "background": "#000000",
+          "primary": "#FFFFFF",
+          "secondary": "#FFFFFF",
+          "coordinate": "#FFFFFF"
+        },
+        "color_transparent": {
+          "background": "#0000",
+          "primary": "#000000",
+          "secondary": "#000000",
+          "coordinate": "#000000"
+        },
+        "textBlock": { "padding": "8px", "rounded": "8px", "spacing": "1" }
+      }
+    },
+    "mapDimensionsIn": {
+      "map_width": 36,
+      "map_height": 24,
+      "map_pixel_multiplier": 23
+    }
+  }
+]
