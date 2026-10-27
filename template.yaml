@@ -1,0 +1,118 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Async high-resolution PDF tile engine for the Lyfe Captures portfolio demo
+
+Globals:
+  Function:
+    Runtime: python3.12
+    Architectures: [arm64]
+    CodeUri: backend/
+    Environment:
+      Variables:
+        JOBS_TABLE: !Ref JobsTable
+        OUTPUT_BUCKET: !Ref OutputBucket
+
+Resources:
+  OutputBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      LifecycleConfiguration:
+        Rules:
+          - Id: DeleteDemoExports
+            Status: Enabled
+            ExpirationInDays: 1
+
+  JobsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: jobId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: jobId
+          KeyType: HASH
+      TimeToLiveSpecification:
+        AttributeName: expiresAt
+        Enabled: true
+
+  DeadLetterQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      MessageRetentionPeriod: 1209600
+
+  RenderQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      VisibilityTimeout: 360
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt DeadLetterQueue.Arn
+        maxReceiveCount: 2
+
+  ApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: api.handler
+      MemorySize: 256
+      Timeout: 10
+      Environment:
+        Variables:
+          QUEUE_URL: !Ref RenderQueue
+      Policies:
+        - DynamoDBCrudPolicy: { TableName: !Ref JobsTable }
+        - SQSSendMessagePolicy: { QueueName: !GetAtt RenderQueue.QueueName }
+        - S3ReadPolicy: { BucketName: !Ref OutputBucket }
+      Events:
+        CreateJob:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref DemoApi
+            Path: /jobs
+            Method: POST
+        GetJob:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref DemoApi
+            Path: /jobs/{jobId}
+            Method: GET
+
+  WorkerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: worker.handler
+      MemorySize: 1024
+      Timeout: 300
+      ReservedConcurrentExecutions: 1
+      Policies:
+        - DynamoDBCrudPolicy: { TableName: !Ref JobsTable }
+        - S3WritePolicy: { BucketName: !Ref OutputBucket }
+      Events:
+        RenderJob:
+          Type: SQS
+          Properties:
+            Queue: !GetAtt RenderQueue.Arn
+            BatchSize: 1
+
+  DemoApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      CorsConfiguration:
+        AllowOrigins:
+          - https://josephmhernandez.com
+        AllowMethods: [GET, POST, OPTIONS]
+        AllowHeaders: [content-type]
+        MaxAge: 600
+      DefaultRouteSettings:
+        ThrottlingBurstLimit: 8
+        ThrottlingRateLimit: 3
+
+Outputs:
+  ApiUrl:
+    Value: !Sub "https://${DemoApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}"
+  OutputBucketName:
+    Value: !Ref OutputBucket

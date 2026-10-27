@@ -1,41 +1,38 @@
-# Map Poster Generator
+# Lyfe Captures Map Studio + Tile Engine
 
-An interactive, client-side map-poster renderer adapted from the product design and rendering concepts behind **Lyfe Captures** and the Python **Tile Engine**.
+A public, working reconstruction of the map-design flow from **Lyfe Captures**, backed by a serverless high-resolution PDF tile engine on AWS.
 
 **Live demo:** <https://josephmhernandez.com/demos/maps/>
 
-![Interactive map poster studio](docs/demo.png)
+## What is real
 
-## Features
+- Movable and zoomable Leaflet map using OpenStreetMap tiles
+- Place search, exact viewport bounds, center marker, titles, and portrait/landscape formats
+- Asynchronous API → SQS → Lambda rendering workflow
+- Backend tile selection at a higher export zoom when the selected area allows it
+- PDF composition from real map tiles, with typography and a vector center marker
+- Private S3 output and a 15-minute presigned download URL
 
-- Six coordinate-seeded city compositions
-- Four visual themes
-- Portrait and landscape rendering
-- Editable location typography
-- Optional location marker
-- Deterministic procedural road graph
-- Local PNG export
-- No accounts, cart, payments, or uploaded data
+## Cost and abuse controls
 
-## Rendering pipeline
+- Lambda worker reserved concurrency is limited to one
+- HTTP API throttling is enabled
+- DynamoDB and S3 are pay-per-request
+- Jobs and generated files expire after one day
+- The demo has no account, cart, payment, or Stripe flow
 
-```text
-Location seed → procedural road graph → style pass → typography → PNG export
-```
-
-The original Python engine downloaded map tiles, assembled and cropped them to a geographic bounding box, added pins and backgrounds, applied transparency/style transforms, and rendered print typography. This public demo uses an original procedural road network so it has no private map-provider key, tile-service dependency, or per-render backend cost.
-
-## Run locally
+## Deploy
 
 ```bash
-python3 -m http.server 8080 --directory web
+sam build
+sam deploy --stack-name jmh-map-poster-demo --resolve-s3 --capabilities CAPABILITY_IAM
 ```
 
-Then open <http://localhost:8080>.
+Copy the `ApiUrl` stack output into `web/config.js`, then publish `web/` to static hosting.
 
-## Privacy and cost
+## Attribution
 
-Rendering happens entirely inside the visitor's browser. No location or image is uploaded, and the deployed demo requires only static hosting.
+Map data and tiles are © OpenStreetMap contributors. This low-volume portfolio demonstration identifies its backend requests with a descriptive user agent and does not provide bulk or offline tile access.
 
 ## License
 

@@ -1,21 +1,33 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Interactive generative map-poster renderer by Joseph Hernandez."><link rel="canonical" href="https://josephmhernandez.com/demos/maps/"><meta property="og:title" content="Map Poster Generator"><meta property="og:description" content="Design and export a procedural location poster directly in the browser."><title>Map Poster Generator</title><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head><body>
-  <header><a href="/">← Joseph Hernandez</a><span>CLIENT-SIDE RENDERER</span><a href="https://github.com/josephmhernandez/map-poster-generator">Source ↗</a></header>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Design a custom map in a live viewport and generate a high-resolution PDF with the Tile Engine.">
+  <link rel="canonical" href="https://josephmhernandez.com/demos/maps/"><meta property="og:title" content="Lyfe Captures Map Studio">
+  <meta property="og:description" content="A live map editor backed by an asynchronous high-resolution PDF tile engine on AWS.">
+  <title>Lyfe Captures Map Studio</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""><link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script><script src="config.js"></script><script src="app.js" defer></script>
+</head><body>
+  <header><a href="/">← Joseph Hernandez</a><span>LYFE CAPTURES × TILE ENGINE</span><a href="https://github.com/josephmhernandez/map-poster-generator">Source ↗</a></header>
   <main>
-    <section class="intro"><p class="eyebrow">LYFE CAPTURES × TILE ENGINE</p><h1>Turn a place into a print.</h1><p>A lightweight public demo of the rendering pipeline behind my map projects. Choose a location, style the composition, and export a poster—all in the browser.</p></section>
+    <section class="intro"><p class="eyebrow">LIVE PRODUCT DEMO</p><h1>Make a map that means something.</h1><p>Move and zoom the real map, personalize the print, then send the exact viewport to the backend Tile Engine. It assembles map tiles into a high-resolution PDF and returns a short-lived S3 download link.</p></section>
     <section class="studio">
       <aside class="controls">
-        <div class="control-head"><small>POSTER CONTROLS</small><button id="randomize">Randomize</button></div>
-        <label>Location<select id="city"><option value="austin">Austin, Texas</option><option value="seattle">Seattle, Washington</option><option value="chicago">Chicago, Illinois</option><option value="brooklyn">Brooklyn, New York</option><option value="santa-fe">Santa Fe, New Mexico</option><option value="honolulu">Honolulu, Hawaii</option></select></label>
-        <label>Title<input id="title" maxlength="30" value="AUSTIN"></label>
-        <label>Subtitle<input id="subtitle" maxlength="48" value="30.2672° N · 97.7431° W"></label>
-        <fieldset><legend>Visual style</legend><div class="swatches"><button class="swatch active" data-style="midnight" aria-label="Midnight"><i></i>Midnight</button><button class="swatch" data-style="paper" aria-label="Paper"><i></i>Paper</button><button class="swatch" data-style="ruby" aria-label="Ruby"><i></i>Ruby</button><button class="swatch" data-style="ocean" aria-label="Ocean"><i></i>Ocean</button></div></fieldset>
-        <fieldset><legend>Format</legend><div class="segments"><button class="active" data-format="portrait">Portrait</button><button data-format="landscape">Landscape</button></div></fieldset>
-        <label class="check"><input id="pin" type="checkbox" checked><span>Show location marker</span></label>
-        <button id="download" class="primary">Download PNG <span>↓</span></button>
-        <p class="hint">The export is rendered locally. No image or location data is uploaded.</p>
+        <div class="control-head"><small>YOUR MAP</small><span id="zoom-readout">ZOOM 12</span></div>
+        <label>Find a place<div class="search-row"><input id="place" value="Austin, Texas" maxlength="80"><button id="search" type="button">Go</button></div></label>
+        <label>Title<input id="title" maxlength="48" value="AUSTIN"></label>
+        <label>Subtitle<input id="subtitle" maxlength="90" value="30.2672° N · 97.7431° W"></label>
+        <fieldset><legend>Format</legend><div class="segments"><button class="active" data-format="portrait">24 × 36 portrait</button><button data-format="landscape">36 × 24 landscape</button></div></fieldset>
+        <label class="check"><input id="pin" type="checkbox" checked><span>Mark the center</span></label>
+        <button id="generate" class="primary">Generate high-res PDF <span>→</span></button>
+        <div id="job-status" class="job-status" aria-live="polite">Ready. Pan and zoom the map to frame your print.</div>
+        <a id="download" class="download" hidden>Download PDF <span>↓</span></a>
+        <p class="hint">No cart or payment flow. Demo exports expire automatically after one day; each download link lasts 15 minutes.</p>
       </aside>
-      <section class="preview"><div class="poster-frame"><canvas id="poster" width="900" height="1200"></canvas></div><div class="pipeline"><span>Coordinate seed</span><b>→</b><span>Road graph</span><b>→</b><span>Style pass</span><b>→</b><span>Typography</span><b>→</b><span>PNG</span></div></section>
+      <section class="preview">
+        <div id="poster-frame" class="poster-frame portrait"><div id="map"></div><div class="map-pin" id="preview-pin"></div><div class="poster-copy"><strong id="preview-title">AUSTIN</strong><span id="preview-subtitle">30.2672° N · 97.7431° W</span><small>LYFE CAPTURES · CUSTOM MAP</small></div></div>
+        <div class="pipeline"><span>Live viewport</span><b>→</b><span>SQS job</span><b>→</b><span>Tile assembly</span><b>→</b><span>S3</span><b>→</b><span>PDF</span></div>
+      </section>
     </section>
   </main>
 </body></html>
