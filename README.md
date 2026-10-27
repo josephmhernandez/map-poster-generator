@@ -4,6 +4,8 @@ An interactive, client-side map-poster renderer adapted from the product design 
 
 **Live demo:** <https://josephmhernandez.com/demos/maps/>
 
+![Interactive map poster studio](docs/demo.png)
+
 ## Features
 
 - Six coordinate-seeded city compositions
