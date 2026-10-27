@@ -1,0 +1,102 @@
+[
+  {
+    "pinList": [
+      {
+        "id": "c5e8559b-f2ed-4004-865c-6800dee59ec9",
+        "size": 70,
+        "style": "mountain-black-white",
+        "position": { "lat": 39.67019926771586, "lng": -105.07461547851564 }
+      }
+    ],
+    "center": [39.73676229957947, -104.97161865234376],
+    "zoom": 10,
+    "orientation": "portrait",
+    "textPrimary": "Aspen, CO",
+    "textSecondary": "",
+    "textCoordinates": "N 39°40'12.72\" W 105°4'28.62\"",
+    "styling": "basic",
+    "size": "_24_36",
+    "tileLayer": "modern-light",
+    "bbox": "{\"_southWest\":{\"lat\":39.29817374735305,\"lng\":-105.35064697265626},\"_northEast\":{\"lat\":40.17257757632171,\"lng\":-104.59259033203125}}",
+    "tileZoomOffset": "2",
+    "quantity": 1,
+    "description": "Map of Aspen, CO",
+    "id": "7b84073c-2deb-46a1-8789-1bfae4912fd5",
+    "name": "Personalized Map",
+    "unitPrice": 699,
+    "lineItemId": [
+      {
+        "id": "item_7RyWOwmK5nEa2V",
+        "product_id": "prod_VKXmwDy717orgD",
+        "name": "Personalized Map",
+        "product_name": "Personalized Map",
+        "sku": null,
+        "permalink": "qNG91W",
+        "quantity": 5,
+        "price": {
+          "raw": 699,
+          "formatted": "699.00",
+          "formatted_with_symbol": "$699.00",
+          "formatted_with_code": "699.00 USD"
+        },
+        "line_total": {
+          "raw": 3495,
+          "formatted": "3,495.00",
+          "formatted_with_symbol": "$3,495.00",
+          "formatted_with_code": "3,495.00 USD"
+        },
+        "is_valid": true,
+        "product_meta": [],
+        "selected_options": [],
+        "variant": null,
+        "image": {
+          "id": "ast_zkK6oL4p3VoXn0",
+          "url": "https://cdn.chec.io/merchants/47490/assets/bRdYbK5ondeqWnwt|prod-pic-commerce.png",
+          "description": null,
+          "is_image": true,
+          "filename": "prod-pic-commerce.png",
+          "file_size": 676402,
+          "file_extension": "png",
+          "image_dimensions": { "width": 800, "height": 800 },
+          "meta": [],
+          "created_at": 1674768264,
+          "updated_at": 1674768267
+        },
+        "tax": null
+      }
+    ],
+    "isTransparentTextBlock": false,
+    "styling_specs": {},
+    "text_styling_specs": {
+      "id": "modern-light",
+      "iconImg": "/modernLightIcon.svg",
+      "url": "https://api.maptiler.com/maps/b5849635-c4d4-4bb8-b7ea-78ccd9bcf89c/{z}/{x}/{y}.png?key=fLxXsh3K0MP3y21i3bJs",
+      "text": {
+        "fontFamily": {
+          "primary": "Semplicita",
+          "secondary": "Semplicita",
+          "coordinate": "Semplicita"
+        },
+        "size": { "primary": "24", "secondary": "12", "coordinate": "8" },
+        "color": {
+          "background": "#000000",
+          "primary": "#FFFFFF",
+          "secondary": "#FFFFFF",
+          "coordinate": "#FFFFFF"
+        },
+        "color_transparent": {
+          "background": "#0000",
+          "primary": "#000000",
+          "secondary": "#000000",
+          "coordinate": "#000000"
+        },
+        "textBlock": { "padding": "8px", "rounded": "3px", "spacing": "1" }
+      }
+    },
+    "mapDimensionsIn": {
+      "map_width": 24,
+      "map_height": 36,
+      "map_pixel_multiplier": 23
+    }
+  }
+]

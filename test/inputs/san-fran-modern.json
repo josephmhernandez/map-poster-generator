@@ -1,0 +1,95 @@
+[
+  {
+    "pinList": [],
+    "center": [37.82171761385457, -122.2998047385206],
+    "zoom": 10,
+    "orientation": "portrait",
+    "textPrimary": "San Francisco",
+    "textSecondary": "CA, USA",
+    "textCoordinates": "N 37°49'18.18\" W 122°17'59.3\"",
+    "styling": "basic",
+    "size": "_24_36",
+    "tileLayer": "modern-light",
+    "bbox": "{\"_southWest\":{\"lat\":37.37124857287921,\"lng\":-122.67883300781251},\"_northEast\":{\"lat\":38.26945406815749,\"lng\":-121.92077636718751}}",
+    "tileZoomOffset": "2",
+    "quantity": 1,
+    "description": "Map of San Francisco",
+    "id": "8ef288b8-b3e6-463a-a559-dea2412fbdf4",
+    "name": "Personalized Map",
+    "unitPrice": 699,
+    "lineItemId": [
+      {
+        "id": "item_7RyWOwmK5nEa2V",
+        "product_id": "prod_VKXmwDy717orgD",
+        "name": "Personalized Map",
+        "product_name": "Personalized Map",
+        "sku": null,
+        "permalink": "qNG91W",
+        "quantity": 1,
+        "price": {
+          "raw": 699,
+          "formatted": "699.00",
+          "formatted_with_symbol": "$699.00",
+          "formatted_with_code": "699.00 USD"
+        },
+        "line_total": {
+          "raw": 699,
+          "formatted": "699.00",
+          "formatted_with_symbol": "$699.00",
+          "formatted_with_code": "699.00 USD"
+        },
+        "is_valid": true,
+        "product_meta": [],
+        "selected_options": [],
+        "variant": null,
+        "image": {
+          "id": "ast_zkK6oL4p3VoXn0",
+          "url": "https://cdn.chec.io/merchants/47490/assets/bRdYbK5ondeqWnwt|prod-pic-commerce.png",
+          "description": null,
+          "is_image": true,
+          "filename": "prod-pic-commerce.png",
+          "file_size": 676402,
+          "file_extension": "png",
+          "image_dimensions": { "width": 800, "height": 800 },
+          "meta": [],
+          "created_at": 1674768264,
+          "updated_at": 1674768267
+        },
+        "tax": null
+      }
+    ],
+    "isTransparentTextBlock": true,
+    "styling_specs": {},
+    "text_styling_specs": {
+      "id": "modern-light",
+      "iconImg": "/modernLightIcon.svg",
+      "url": "https://api.maptiler.com/maps/b5849635-c4d4-4bb8-b7ea-78ccd9bcf89c/{z}/{x}/{y}.png?key=fLxXsh3K0MP3y21i3bJs",
+      "text": {
+        "fontFamily": {
+          "primary": "Semplicita",
+          "secondary": "Semplicita",
+          "coordinate": "Semplicita"
+        },
+        "size": { "primary": "24", "secondary": "12", "coordinate": "8" },
+        "color": {
+          "background": "#000000",
+          "primary": "#FFFFFF",
+          "secondary": "#FFFFFF",
+          "coordinate": "#FFFFFF"
+        },
+        "color_transparent": {
+          "background": "#0000",
+          "primary": "#000000",
+          "secondary": "#000000",
+          "coordinate": "#000000"
+        },
+        "textBlock": { "padding": "8px", "rounded": "3px", "spacing": "1" }
+      }
+    },
+    "mapDimensionsIn": {
+      "map_width": 24,
+      "map_height": 36,
+      "map_pixel_multiplier": 23
+    }
+  }
+]

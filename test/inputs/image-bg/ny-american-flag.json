@@ -1,0 +1,103 @@
+[
+  {
+    "pinList": [],
+    "location": "",
+    "center": [40.7326897662857, -74.0361785888672],
+    "zoom": 11,
+    "orientation": "portrait",
+    "textPrimary": "",
+    "textSecondary": "",
+    "textCoordinates": "",
+    "styling": "basic",
+    "size": "_24_36",
+    "tileLayer": "flag-back",
+    "bbox": "{\"_southWest\":{\"lat\":40.51693121343741,\"lng\":-74.22569274902345},\"_northEast\":{\"lat\":40.947750930283476,\"lng\":-73.84666442871095}}",
+    "tileZoomOffset": 2,
+    "bgImgCode": "usa",
+    "quantity": 1,
+    "description": "Map near 100 14th St, Jersey City, NJ 07310, USA",
+    "id": "c881350f-569b-4cad-98dc-64f58ddf7301",
+    "name": "Personalized Map",
+    "unitPrice": 499,
+    "lineItemId": [
+      {
+        "id": "item_7RyWOwmK5nEa2V",
+        "product_id": "prod_VKXmwDy717orgD",
+        "name": "Personalized Map",
+        "product_name": "Personalized Map",
+        "sku": null,
+        "permalink": "qNG91W",
+        "quantity": 1,
+        "price": {
+          "raw": 499,
+          "formatted": "499.00",
+          "formatted_with_symbol": "$499.00",
+          "formatted_with_code": "499.00 USD"
+        },
+        "line_total": {
+          "raw": 499,
+          "formatted": "499.00",
+          "formatted_with_symbol": "$499.00",
+          "formatted_with_code": "499.00 USD"
+        },
+        "is_valid": true,
+        "product_meta": [],
+        "selected_options": [],
+        "variant": null,
+        "image": {
+          "id": "ast_yA6nldR94goEWb",
+          "url": "https://cdn.chec.io/merchants/47490/assets/CjaynbQmf8IB1ml3|text-close-up.jpg",
+          "description": null,
+          "is_image": true,
+          "filename": "text-close-up.jpg",
+          "file_size": 356984,
+          "file_extension": "jpg",
+          "image_dimensions": { "width": 2000, "height": 1000 },
+          "meta": [],
+          "created_at": 1679717075,
+          "updated_at": 1679717076
+        },
+        "tax": null
+      }
+    ],
+    "isTransparentTextBlock": false,
+    "text_styling_specs": {
+      "id": "flag-back",
+      "iconImg": "/tan-ocean.png",
+      "url": "https://api.maptiler.com/maps/11489910-a9d8-4e58-a989-e00a490cf934/{z}/{x}/{y}.jpg?key=fLxXsh3K0MP3y21i3bJs",
+      "isOverlay": true,
+      "text": {
+        "fontFamily": {
+          "primary": "Semplicita",
+          "secondary": "Semplicita",
+          "coordinate": "Semplicita"
+        },
+        "size": { "primary": "24", "secondary": "12", "coordinate": "8" },
+        "size_demo": { "primary": "8", "secondary": "4", "coordinate": "3" },
+        "color": {
+          "background": "#000000",
+          "primary": "#FFFFFF",
+          "secondary": "#FFFFFF",
+          "coordinate": "#FFFFFF"
+        },
+        "color_transparent": {
+          "background": "#0000",
+          "primary": "#000000",
+          "secondary": "#000000",
+          "coordinate": "#000000"
+        },
+        "textBlock": { "padding": "8px", "rounded": "8px", "spacing": "1" },
+        "text_block_demo": {
+          "padding": "1px",
+          "rounded": "3px",
+          "spacing": "1"
+        }
+      }
+    },
+    "mapDimensionsIn": {
+      "map_width": 24,
+      "map_height": 36,
+      "map_pixel_multiplier": 23
+    }
+  }
+]

@@ -1,0 +1,121 @@
+[
+  {
+    "pinList": [
+      {
+        "id": "6ae38373-ad25-4a1f-8e52-83c0798a3cd5-map-dark",
+        "size": 40,
+        "style": "heart-black-white",
+        "position": { "lat": 40.697299008636755, "lng": -73.68530273437501 }
+      },
+      {
+        "id": "c88cfc53-abc1-4257-9caf-f609e596524f",
+        "size": 75,
+        "style": "heart-black-white",
+        "position": { "lat": 41.588742636696765, "lng": -74.56146240234376 }
+      },
+      {
+        "id": "364bc8f0-d1d6-4258-9418-a68dc6106f82",
+        "size": 75,
+        "style": "diamond-white-black",
+        "position": { "lat": 40.73685214795608, "lng": -74.56695556640626 }
+      },
+      {
+        "id": "bbd1d4d2-513a-4131-9def-4cbb35186e34",
+        "size": 75,
+        "style": "mountain-white-black",
+        "position": { "lat": 41.629814503758624, "lng": -73.66882324218751 }
+      }
+    ],
+    "location": "",
+    "center": [41.209655278807034, -74.18518066406251],
+    "zoom": 9,
+    "orientation": "portrait",
+    "textPrimary": "New York City",
+    "textSecondary": "New York, USA",
+    "textCoordinates": "N 40°41'50.28\" W 73°41'7.09\"",
+    "styling": "basic",
+    "size": "_24_36",
+    "tileLayer": "modern-light",
+    "bbox": "{\"_southWest\":{\"lat\":40.348637376031725,\"lng\":-74.94323730468751},\"_northEast\":{\"lat\":42.05948945192712,\"lng\":-73.42712402343751}}",
+    "tileZoomOffset": "2",
+    "quantity": 1,
+    "description": "Map of New York City",
+    "id": "modern-light-274da67c-685c-4e12-92e0-82f272e43800",
+    "name": "Personalized Map",
+    "unitPrice": 699,
+    "lineItemId": [
+      {
+        "id": "item_7RyWOwmK5nEa2V",
+        "product_id": "prod_VKXmwDy717orgD",
+        "name": "Personalized Map",
+        "product_name": "Personalized Map",
+        "sku": null,
+        "permalink": "qNG91W",
+        "quantity": 2,
+        "price": {
+          "raw": 699,
+          "formatted": "699.00",
+          "formatted_with_symbol": "$699.00",
+          "formatted_with_code": "699.00 USD"
+        },
+        "line_total": {
+          "raw": 1398,
+          "formatted": "1,398.00",
+          "formatted_with_symbol": "$1,398.00",
+          "formatted_with_code": "1,398.00 USD"
+        },
+        "is_valid": true,
+        "product_meta": [],
+        "selected_options": [],
+        "variant": null,
+        "image": {
+          "id": "ast_zkK6oL4p3VoXn0",
+          "url": "https://cdn.chec.io/merchants/47490/assets/bRdYbK5ondeqWnwt|prod-pic-commerce.png",
+          "description": null,
+          "is_image": true,
+          "filename": "prod-pic-commerce.png",
+          "file_size": 676402,
+          "file_extension": "png",
+          "image_dimensions": { "width": 800, "height": 800 },
+          "meta": [],
+          "created_at": 1674768264,
+          "updated_at": 1674768267
+        },
+        "tax": null
+      }
+    ],
+    "isTransparentTextBlock": true,
+    "styling_specs": {},
+    "text_styling_specs": {
+      "id": "ocean-tan",
+      "iconImg": "/tan-ocean.png",
+      "url": "https://api.maptiler.com/maps/cd852295-1a11-4a53-a22b-995b2ded0e62/{z}/{x}/{y}.png?key=fLxXsh3K0MP3y21i3bJs",
+      "text": {
+        "fontFamily": {
+          "primary": "Semplicita",
+          "secondary": "Semplicita",
+          "coordinate": "Semplicita"
+        },
+        "size": { "primary": "24", "secondary": "12", "coordinate": "8" },
+        "color": {
+          "background": "#000000",
+          "primary": "#FFFFFF",
+          "secondary": "#FFFFFF",
+          "coordinate": "#FFFFFF"
+        },
+        "color_transparent": {
+          "background": "#0000",
+          "primary": "#000000",
+          "secondary": "#000000",
+          "coordinate": "#000000"
+        },
+        "textBlock": { "padding": "8px", "rounded": "8px", "spacing": "1" }
+      }
+    },
+    "mapDimensionsIn": {
+      "map_width": 24,
+      "map_height": 36,
+      "map_pixel_multiplier": 23
+    }
+  }
+]

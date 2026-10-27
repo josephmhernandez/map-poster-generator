@@ -1,0 +1,102 @@
+[
+  {
+    "pinList": [
+      {
+        "id": "8a61c821-a90f-4125-9e0a-5d98e5dae9ef",
+        "size": 40,
+        "style": "heart-black-white",
+        "position": { "lat": 42.343320316410804, "lng": -83.01818847656251 }
+      }
+    ],
+    "center": [40.68532434783307, -74.0251922607422],
+    "zoom": 11,
+    "orientation": "landscape",
+    "textPrimary": "New York",
+    "textSecondary": "NY, USA",
+    "textCoordinates": "N 40°41'7.17\" W 74°1'30.69\"",
+    "styling": "basic",
+    "size": "_24_36",
+    "tileLayer": "city-lights",
+    "bbox": "{\"_southWest\":{\"lat\":40.54146060871528,\"lng\":-74.30946350097658},\"_northEast\":{\"lat\":40.828878212816555,\"lng\":-73.74092102050783}}",
+    "tileZoomOffset": "2",
+    "quantity": 1,
+    "description": "Map of New York",
+    "id": "29e43d45-3891-4569-97a5-ea1e4c58cdd3",
+    "name": "Personalized Map",
+    "unitPrice": 699,
+    "lineItemId": [
+      {
+        "id": "item_7RyWOwmK5nEa2V",
+        "product_id": "prod_VKXmwDy717orgD",
+        "name": "Personalized Map",
+        "product_name": "Personalized Map",
+        "sku": null,
+        "permalink": "qNG91W",
+        "quantity": 2,
+        "price": {
+          "raw": 699,
+          "formatted": "699.00",
+          "formatted_with_symbol": "$699.00",
+          "formatted_with_code": "699.00 USD"
+        },
+        "line_total": {
+          "raw": 1398,
+          "formatted": "1,398.00",
+          "formatted_with_symbol": "$1,398.00",
+          "formatted_with_code": "1,398.00 USD"
+        },
+        "is_valid": true,
+        "product_meta": [],
+        "selected_options": [],
+        "variant": null,
+        "image": {
+          "id": "ast_zkK6oL4p3VoXn0",
+          "url": "https://cdn.chec.io/merchants/47490/assets/bRdYbK5ondeqWnwt|prod-pic-commerce.png",
+          "description": null,
+          "is_image": true,
+          "filename": "prod-pic-commerce.png",
+          "file_size": 676402,
+          "file_extension": "png",
+          "image_dimensions": { "width": 800, "height": 800 },
+          "meta": [],
+          "created_at": 1674768264,
+          "updated_at": 1674768267
+        },
+        "tax": null
+      }
+    ],
+    "isTransparentTextBlock": true,
+    "styling_specs": {},
+    "text_styling_specs": {
+      "id": "city-lights",
+      "iconImg": "/city-lights.png",
+      "url": "https://api.maptiler.com/maps/70207988-ec48-4dce-8172-230ff9375b7d/{z}/{x}/{y}.png?key=fLxXsh3K0MP3y21i3bJs",
+      "text": {
+        "fontFamily": {
+          "primary": "Semplicita",
+          "secondary": "Semplicita",
+          "coordinate": "Semplicita"
+        },
+        "size": { "primary": "24", "secondary": "12", "coordinate": "8" },
+        "color": {
+          "background": "#000000",
+          "primary": "#ffd900",
+          "secondary": "#ffd900",
+          "coordinate": "#ffd900"
+        },
+        "color_transparent": {
+          "background": "#0000",
+          "primary": "#ffd900",
+          "secondary": "#ffd900",
+          "coordinate": "#ffd900"
+        },
+        "textBlock": { "padding": "8px", "rounded": "8px", "spacing": "1" }
+      }
+    },
+    "mapDimensionsIn": {
+      "map_width": 36,
+      "map_height": 24,
+      "map_pixel_multiplier": 23
+    }
+  }
+]

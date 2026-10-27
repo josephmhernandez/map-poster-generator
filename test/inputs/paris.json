@@ -1,0 +1,101 @@
+[
+  {
+    "pinList": [
+      {
+        "id": "96731603-42ac-4d7c-ab3d-bdc2d29a2275",
+        "size": 35,
+        "style": "diamond-black-white",
+        "position": { "lat": 48.857938768171536, "lng": 2.295455932617188 }
+      }
+    ],
+    "center": [48.84912860497674, 2.330131530761719],
+    "zoom": 11,
+    "orientation": "landscape",
+    "textPrimary": "Paris",
+    "textSecondary": "France",
+    "textCoordinates": "N 48°51'28.58\" E 2°17'43.64\"",
+    "styling": "basic",
+    "size": "_24_36",
+    "tileLayer": "modern-light",
+    "bbox": "{\"_southWest\":{\"lat\":48.72403812433608,\"lng\":2.0462036132812504},\"_northEast\":{\"lat\":48.97345664363535,\"lng\":2.6147460937500004}}",
+    "tileZoomOffset": 2,
+    "quantity": 1,
+    "description": "Map of Paris",
+    "id": "aa99e538-3961-4d9b-9d02-8d918c554b01",
+    "name": "Personalized Map",
+    "unitPrice": 499,
+    "lineItemId": [
+      {
+        "id": "item_7RyWOwmK5nEa2V",
+        "product_id": "prod_VKXmwDy717orgD",
+        "name": "Personalized Map",
+        "product_name": "Personalized Map",
+        "sku": null,
+        "permalink": "qNG91W",
+        "quantity": 2,
+        "price": {
+          "raw": 499,
+          "formatted": "499.00",
+          "formatted_with_symbol": "$499.00",
+          "formatted_with_code": "499.00 USD"
+        },
+        "line_total": {
+          "raw": 998,
+          "formatted": "998.00",
+          "formatted_with_symbol": "$998.00",
+          "formatted_with_code": "998.00 USD"
+        },
+        "is_valid": true,
+        "product_meta": [],
+        "selected_options": [],
+        "variant": null,
+        "image": {
+          "id": "ast_yA6nldR94goEWb",
+          "url": "https://cdn.chec.io/merchants/47490/assets/CjaynbQmf8IB1ml3|text-close-up.jpg",
+          "description": null,
+          "is_image": true,
+          "filename": "text-close-up.jpg",
+          "file_size": 356984,
+          "file_extension": "jpg",
+          "image_dimensions": { "width": 2000, "height": 1000 },
+          "meta": [],
+          "created_at": 1679717075,
+          "updated_at": 1679717076
+        },
+        "tax": null
+      }
+    ],
+    "isTransparentTextBlock": true,
+    "text_styling_specs": {
+      "id": "modern-light",
+      "iconImg": "/modernLightIcon.svg",
+      "url": "https://api.maptiler.com/maps/b5849635-c4d4-4bb8-b7ea-78ccd9bcf89c/{z}/{x}/{y}.png?key=fLxXsh3K0MP3y21i3bJs",
+      "text": {
+        "fontFamily": {
+          "primary": "Semplicita",
+          "secondary": "Semplicita",
+          "coordinate": "Semplicita"
+        },
+        "size": { "primary": "24", "secondary": "12", "coordinate": "8" },
+        "color": {
+          "background": "#000000",
+          "primary": "#FFFFFF",
+          "secondary": "#FFFFFF",
+          "coordinate": "#FFFFFF"
+        },
+        "color_transparent": {
+          "background": "#0000",
+          "primary": "#000000",
+          "secondary": "#000000",
+          "coordinate": "#000000"
+        },
+        "textBlock": { "padding": "8px", "rounded": "3px", "spacing": "1" }
+      }
+    },
+    "mapDimensionsIn": {
+      "map_width": 36,
+      "map_height": 24,
+      "map_pixel_multiplier": 23
+    }
+  }
+]

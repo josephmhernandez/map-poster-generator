@@ -1,0 +1,102 @@
+[
+  {
+    "pinList": [
+      {
+        "id": "4daaf42d-bdd9-41ca-9fb9-6874a0383ded",
+        "size": 40,
+        "style": "diamond-white-black",
+        "position": { "lat": 19.766703551716976, "lng": -155.09399414062503 }
+      }
+    ],
+    "center": [21.08450008351735, -158.42285156250003],
+    "zoom": 7,
+    "orientation": "landscape",
+    "textPrimary": "Hawaii",
+    "textSecondary": "USA",
+    "textCoordinates": "N 21°5'4.2\" W 158°25'22.27\"",
+    "styling": "basic",
+    "size": "_24_36",
+    "tileLayer": "ocean-tan",
+    "bbox": "{\"_southWest\":{\"lat\":18.22935133838668,\"lng\":-162.97119140625003},\"_northEast\":{\"lat\":23.885837699862005,\"lng\":-153.87451171875}}",
+    "tileZoomOffset": "2",
+    "quantity": 1,
+    "description": "Map of Hawaii",
+    "id": "e129ad88-0512-49c7-8ace-7a8c700370d0",
+    "name": "Personalized Map",
+    "unitPrice": 699,
+    "lineItemId": [
+      {
+        "id": "item_7RyWOwmK5nEa2V",
+        "product_id": "prod_VKXmwDy717orgD",
+        "name": "Personalized Map",
+        "product_name": "Personalized Map",
+        "sku": null,
+        "permalink": "qNG91W",
+        "quantity": 4,
+        "price": {
+          "raw": 699,
+          "formatted": "699.00",
+          "formatted_with_symbol": "$699.00",
+          "formatted_with_code": "699.00 USD"
+        },
+        "line_total": {
+          "raw": 2796,
+          "formatted": "2,796.00",
+          "formatted_with_symbol": "$2,796.00",
+          "formatted_with_code": "2,796.00 USD"
+        },
+        "is_valid": true,
+        "product_meta": [],
+        "selected_options": [],
+        "variant": null,
+        "image": {
+          "id": "ast_zkK6oL4p3VoXn0",
+          "url": "https://cdn.chec.io/merchants/47490/assets/bRdYbK5ondeqWnwt|prod-pic-commerce.png",
+          "description": null,
+          "is_image": true,
+          "filename": "prod-pic-commerce.png",
+          "file_size": 676402,
+          "file_extension": "png",
+          "image_dimensions": { "width": 800, "height": 800 },
+          "meta": [],
+          "created_at": 1674768264,
+          "updated_at": 1674768267
+        },
+        "tax": null
+      }
+    ],
+    "isTransparentTextBlock": true,
+    "styling_specs": {},
+    "text_styling_specs": {
+      "id": "ocean-tan",
+      "iconImg": "/tan-ocean.png",
+      "url": "https://api.maptiler.com/maps/cd852295-1a11-4a53-a22b-995b2ded0e62/{z}/{x}/{y}.png?key=fLxXsh3K0MP3y21i3bJs",
+      "text": {
+        "fontFamily": {
+          "primary": "Semplicita",
+          "secondary": "Semplicita",
+          "coordinate": "Semplicita"
+        },
+        "size": { "primary": "24", "secondary": "12", "coordinate": "8" },
+        "color": {
+          "background": "#000000",
+          "primary": "#FFFFFF",
+          "secondary": "#FFFFFF",
+          "coordinate": "#FFFFFF"
+        },
+        "color_transparent": {
+          "background": "#0000",
+          "primary": "#000000",
+          "secondary": "#000000",
+          "coordinate": "#000000"
+        },
+        "textBlock": { "padding": "8px", "rounded": "8px", "spacing": "1" }
+      }
+    },
+    "mapDimensionsIn": {
+      "map_width": 36,
+      "map_height": 24,
+      "map_pixel_multiplier": 23
+    }
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "pinList": [],
+    "center": [32.779192605504846, -97.02987670898439],
+    "zoom": 10,
+    "orientation": "landscape",
+    "textPrimary": "Dallas Fort Worth",
+    "textSecondary": "TX, USA",
+    "textCoordinates": "",
+    "styling": "basic",
+    "size": "_24_36",
+    "tileLayer": "flag-back",
+    "bbox": "{\"_southWest\":{\"lat\":32.45994981267566,\"lng\":-97.59841918945314},\"_northEast\":{\"lat\":33.097294071891696,\"lng\":-96.46133422851564}}",
+    "tileZoomOffset": 2,
+    "bgImgCode": "usa-ripple",
+    "quantity": 1,
+    "description": "Map of Dallas Fort Worth",
+    "id": "303f100b-e920-43d5-a2eb-d7a1e0e8d9bb",
+    "name": "Personalized Map",
+    "unitPrice": 499,
+    "lineItemId": [
+      {
+        "id": "item_7RyWOwmK5nEa2V",
+        "product_id": "prod_VKXmwDy717orgD",
+        "name": "Personalized Map",
+        "product_name": "Personalized Map",
+        "sku": null,
+        "permalink": "qNG91W",
+        "quantity": 1,
+        "price": {
+          "raw": 499,
+          "formatted": "499.00",
+          "formatted_with_symbol": "$499.00",
+          "formatted_with_code": "499.00 USD"
+        },
+        "line_total": {
+          "raw": 499,
+          "formatted": "499.00",
+          "formatted_with_symbol": "$499.00",
+          "formatted_with_code": "499.00 USD"
+        },
+        "is_valid": true,
+        "product_meta": [],
+        "selected_options": [],
+        "variant": null,
+        "image": {
+          "id": "ast_yA6nldR94goEWb",
+          "url": "https://cdn.chec.io/merchants/47490/assets/CjaynbQmf8IB1ml3|text-close-up.jpg",
+          "description": null,
+          "is_image": true,
+          "filename": "text-close-up.jpg",
+          "file_size": 356984,
+          "file_extension": "jpg",
+          "image_dimensions": { "width": 2000, "height": 1000 },
+          "meta": [],
+          "created_at": 1679717075,
+          "updated_at": 1679717076
+        },
+        "tax": null
+      }
+    ],
+    "isTransparentTextBlock": true,
+    "text_styling_specs": {
+      "id": "flag-back",
+      "iconImg": "/tan-ocean.png",
+      "url": "https://api.maptiler.com/maps/11489910-a9d8-4e58-a989-e00a490cf934/{z}/{x}/{y}.jpg?key=fLxXsh3K0MP3y21i3bJs",
+      "isOverlay": true,
+      "text": {
+        "fontFamily": {
+          "primary": "Semplicita",
+          "secondary": "Semplicita",
+          "coordinate": "Semplicita"
+        },
+        "size": { "primary": "24", "secondary": "12", "coordinate": "8" },
+        "size_demo": { "primary": "8", "secondary": "4", "coordinate": "3" },
+        "color": {
+          "background": "#000000",
+          "primary": "#FFFFFF",
+          "secondary": "#FFFFFF",
+          "coordinate": "#FFFFFF"
+        },
+        "color_transparent": {
+          "background": "#0000",
+          "primary": "#000000",
+          "secondary": "#000000",
+          "coordinate": "#000000"
+        },
+        "textBlock": { "padding": "8px", "rounded": "8px", "spacing": "1" },
+        "text_block_demo": {
+          "padding": "1px",
+          "rounded": "3px",
+          "spacing": "1"
+        }
+      }
+    },
+    "mapDimensionsIn": {
+      "map_width": 36,
+      "map_height": 24,
+      "map_pixel_multiplier": 23
+    }
+  }
+]

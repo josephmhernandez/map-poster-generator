@@ -1,0 +1,120 @@
+[
+  {
+    "pinList": [
+      {
+        "id": "1228a38b-2e2e-4840-bc5e-2527a900985d",
+        "size": 30,
+        "style": "heart-white-black",
+        "position": { "lat": 32.82421110161336, "lng": -96.767578125 }
+      },
+      {
+        "id": "977f0b9b-f6e2-4823-842a-53200d679a29",
+        "size": 30,
+        "style": "circle-white-black",
+        "position": { "lat": 32.879587173066305, "lng": -97.15209960937501 }
+      },
+      {
+        "id": "3d5ba233-c8a3-4ea5-85ee-cef0fb748da5",
+        "size": 30,
+        "style": "circle-white-black",
+        "position": { "lat": 30.477082932837682, "lng": -97.635498046875 }
+      },
+      {
+        "id": "88ac08c8-3de4-4c8b-9e06-152a7d60cf6a",
+        "size": 30,
+        "style": "heart-white-black",
+        "position": { "lat": 32.7872745269555, "lng": -98.14086914062501 }
+      }
+    ],
+    "center": [32.11049589629439, -97.20703125000001],
+    "zoom": 7,
+    "orientation": "portrait",
+    "textPrimary": "Dallas, TX",
+    "textSecondary": "United States",
+    "textCoordinates": "N 32°46'35.99\" W 96°47'49.16\"",
+    "styling": "basic",
+    "size": "_24_36",
+    "tileLayer": "dark-transit",
+    "bbox": "{\"_southWest\":{\"lat\":28.17855984939698,\"lng\":-100.23925781250001},\"_northEast\":{\"lat\":35.88014896488361,\"lng\":-94.17480468750001}}",
+    "tileZoomOffset": "2",
+    "quantity": 1,
+    "description": "Map of Dallas, TX",
+    "id": "1576605e-b0ad-411c-a281-f5e30f6741ec",
+    "name": "Personalized Map",
+    "unitPrice": 59.99,
+    "lineItemId": [
+      {
+        "id": "item_7RyWOwmK5nEa2V",
+        "product_id": "prod_VKXmwDy717orgD",
+        "name": "Personalized Map",
+        "product_name": "Personalized Map",
+        "sku": null,
+        "permalink": "qNG91W",
+        "quantity": 1,
+        "price": {
+          "raw": 59.99,
+          "formatted": "59.99",
+          "formatted_with_symbol": "$59.99",
+          "formatted_with_code": "59.99 USD"
+        },
+        "line_total": {
+          "raw": 59.99,
+          "formatted": "59.99",
+          "formatted_with_symbol": "$59.99",
+          "formatted_with_code": "59.99 USD"
+        },
+        "is_valid": true,
+        "product_meta": [],
+        "selected_options": [],
+        "variant": null,
+        "image": {
+          "id": "ast_zkK6oL4p3VoXn0",
+          "url": "https://cdn.chec.io/merchants/47490/assets/bRdYbK5ondeqWnwt|prod-pic-commerce.png",
+          "description": null,
+          "is_image": true,
+          "filename": "prod-pic-commerce.png",
+          "file_size": 676402,
+          "file_extension": "png",
+          "image_dimensions": { "width": 800, "height": 800 },
+          "meta": [],
+          "created_at": 1674768264,
+          "updated_at": 1674768267
+        },
+        "tax": null
+      }
+    ],
+    "isTransparentTextBlock": true,
+    "styling_specs": {},
+    "text_styling_specs": {
+      "id": "dark-transit",
+      "iconImg": "/blackWhiteSquareIcon.svg",
+      "url": "https://api.maptiler.com/maps/265e1571-5b2a-47cf-bdf4-0f78abaefb47/{z}/{x}/{y}.png?key=fLxXsh3K0MP3y21i3bJs",
+      "text": {
+        "fontFamily": {
+          "primary": "Semplicita",
+          "secondary": "Semplicita",
+          "coordinate": "Semplicita"
+        },
+        "size": { "primary": "24", "secondary": "12", "coordinate": "8" },
+        "color": {
+          "background": "#FFFFFF",
+          "primary": "#000000",
+          "secondary": "#000000",
+          "coordinate": "#000000"
+        },
+        "color_transparent": {
+          "background": "#0000",
+          "primary": "#FFFFFF",
+          "secondary": "#FFFFFF",
+          "coordinate": "#FFFFFF"
+        },
+        "textBlock": { "padding": "8px", "rounded": "8px", "spacing": "1" }
+      }
+    },
+    "mapDimensionsIn": {
+      "map_width": 24,
+      "map_height": 36,
+      "map_pixel_multiplier": 23
+    }
+  }
+]

@@ -1,0 +1,39 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+attrs = "==21.4.0"
+autopep8 = "==1.6.0"
+certifi = "==2021.10.8"
+charset-normalizer = "==2.0.12"
+click = "==8.0.4"
+dataclasses = "==0.6"
+idna = "==3.3"
+iniconfig = "==1.1.1"
+mercantile = "==1.2.1"
+numpy = "==1.22.2"
+packaging = "==21.3"
+pillow = "==9.0.1"
+pluggy = "==1.0.0"
+py = "==1.11.0"
+pycodestyle = "==2.8.0"
+pyparsing = "==3.0.7"
+pytest = "==7.0.1"
+regex = "==2022.1.18"
+requests = "==2.27.1"
+toml = "==0.10.2"
+tomli = "==2.0.1"
+urllib3 = "==1.26.8"
+schema = "*"
+glob2 = "*"
+
+[dev-packages]
+black = "*"
+
+[requires]
+python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true
