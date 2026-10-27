@@ -8,18 +8,13 @@
 
 # Output:
 # - Tiff Image of map at high resolution > 300 dpi
-from doctest import OutputChecker
-from multiprocessing.dummy import Array
-from optparse import Option
 import sys
+import os
 from src.engine.transparency_transformer import TransparencyTransformer
 
 from src.models.value_validator import ValueValidator
 import settings
 import src.engine.engine_status_codes as engine_status_codes
-from cgi import print_form
-from stringprep import map_table_b2
-from turtle import st
 from typing import List
 from src.models.coord import Coord
 from src.engine.downloader import Downloader
@@ -255,17 +250,17 @@ def run_tile_engine(context, verbose=False) -> int:
         logging.critical(e, exc_info=True)
         return engine_status_codes.TRANSPARENCY_TRANSFORMER_FAILURE
 
-    # We want to save the map in an EPS format.
-    im = Image.open(settings.IMAGE_FILE_NAME)
-    fig = im.convert("RGB")
-
-    # Convert to CMYK
-    jpg = fig.convert("CMYK")
-    jpg_file_name = settings.IMAGE_FILE_NAME.replace(".png", ".jpg")
-    jpg.save(jpg_file_name)
-
-    new_file_name = settings.IMAGE_FILE_NAME.replace(".png", ".eps")
-    fig.save(new_file_name, lossless=True)
+    # The original print workflow also emitted CMYK JPG and EPS files. The
+    # public demo's contract is the native 300-DPI PNG, so its one-off ECS task
+    # can skip those additional in-memory conversions without changing the map.
+    if os.environ.get("TILE_ENGINE_PNG_ONLY") != "1":
+        im = Image.open(settings.IMAGE_FILE_NAME)
+        fig = im.convert("RGB")
+        jpg = fig.convert("CMYK")
+        jpg_file_name = settings.IMAGE_FILE_NAME.replace(".png", ".jpg")
+        jpg.save(jpg_file_name)
+        new_file_name = settings.IMAGE_FILE_NAME.replace(".png", ".eps")
+        fig.save(new_file_name, lossless=True)
 
     # No borders right now  We are doing flush maps.
 

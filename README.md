@@ -1,38 +1,40 @@
 # Lyfe Captures Map Studio + Tile Engine
 
-A public, working reconstruction of the map-design flow from **Lyfe Captures**, backed by a serverless high-resolution PDF tile engine on AWS.
+The original Lyfe Captures map payload and Python Tile Engine, deployed as a working public portfolio demo.
 
 **Live demo:** <https://josephmhernandez.com/demos/maps/>
 
-## What is real
+## What runs
 
-- Movable and zoomable Leaflet map using OpenStreetMap tiles
-- Place search, exact viewport bounds, center marker, titles, and portrait/landscape formats
-- Asynchronous API → SQS → Lambda rendering workflow
-- Backend tile selection at a higher export zoom when the selected area allows it
-- PDF composition from real map tiles, with typography and a vector center marker
-- Private S3 output and a 15-minute presigned download URL
+- Movable and zoomable Leaflet editor using the original `tileZoomOffset` behavior
+- Current MapTiler raster styles replacing the retired custom style IDs
+- The original list payload, including Leaflet bounds, 24×36 dimensions, styling, text, and pin list
+- The original Python download, tile assembly, exact-bounds crop, pin placement, and typography code
+- A one-off ECS Fargate task for each high-resolution render
+- Native 7200×10800, 300-DPI PNG output in private S3
+- A 15-minute presigned download link; inputs and outputs expire after one day
 
-## Cost and abuse controls
+The original pin PNGs were restored from the Lyfe Captures web repository because the Tile Engine referenced them but its `.gitignore` excluded them.
 
-- Lambda worker reserved concurrency is limited to one
-- HTTP API throttling is enabled
-- DynamoDB and S3 are pay-per-request
-- Jobs and generated files expire after one day
-- The demo has no account, cart, payment, or Stripe flow
+## Architecture
+
+```text
+Leaflet editor → HTTP API/Lambda → ECS RunTask
+                                      │
+                    original Python Tile Engine
+                                      │
+                          DynamoDB + private S3
+```
+
+There is no always-on render worker. The public endpoint is throttled, supports up to five pins, and only accepts the original 24×36 format. No cart, payment, or Stripe code is deployed.
 
 ## Deploy
 
-```bash
-sam build
-sam deploy --stack-name jmh-map-poster-demo --resolve-s3 --capabilities CAPABILITY_IAM
-```
-
-Copy the `ApiUrl` stack output into `web/config.js`, then publish `web/` to static hosting.
+`template.yaml` provisions the API, job table, private bucket, ECR repository, build project, and Fargate task definition. The image source is `engine/`, which contains the original repository as a Git subtree plus the ECS worker wrapper.
 
 ## Attribution
 
-Map data and tiles are © OpenStreetMap contributors. This low-volume portfolio demonstration identifies its backend requests with a descriptive user agent and does not provide bulk or offline tile access.
+Map data is © OpenStreetMap contributors and rendered with MapTiler.
 
 ## License
 

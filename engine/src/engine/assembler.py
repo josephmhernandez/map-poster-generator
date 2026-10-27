@@ -1,14 +1,8 @@
-from cgi import print_form
-from cmath import e
-import enum
 import logging
-from tkinter import font
 from typing import List
-from xml.etree.ElementTree import PI
 from PIL import ImageOps, ImageDraw, ImageFont, Image
 import math
 import decimal
-from pyparsing import Regex
 from src.models.pin import Pin
 import src.engine.engine_utils
 from os import listdir
@@ -17,9 +11,8 @@ from src.models.bbox import Bbox
 from src.models.coord import Coord
 import mercantile
 import numpy as np
-from regex import search
+from re import search
 from src.models.border_style import Border
-import numpy as np
 from src.style_constants import map_font_path, map_pin_path
 import settings
 import re

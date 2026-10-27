@@ -1,0 +1,11 @@
+.controls select {
+  min-width: 0;
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 4px;
+  padding: 12px;
+  font: 500 .83rem ui-monospace, monospace;
+  outline: none;
+}
+
+.controls select:focus { border-color: var(--orange); }

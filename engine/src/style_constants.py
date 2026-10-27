@@ -63,22 +63,22 @@ API_DICT = {
     "dark-transit": {
         "id": "dark-transit",
         "iconImg": "/blackWhiteSquareIcon.svg",
-        "url": "https://api.maptiler.com/maps/265e1571-5b2a-47cf-bdf4-0f78abaefb47/{z}/{x}/{y}@2x.png?key=fLxXsh3K0MP3y21i3bJs",
+        "url": "https://api.maptiler.com/maps/dataviz-dark/{z}/{x}/{y}@2x.png?key=PmIF6Ez34ROeDo7jJGuD",
     },
     "modern-light": {
         "id": "modern-light",
         "iconImg": "/modernLightIcon.svg",
-        "url": "https://api.maptiler.com/maps/b5849635-c4d4-4bb8-b7ea-78ccd9bcf89c/{z}/{x}/{y}@2x.png?key=fLxXsh3K0MP3y21i3bJs",
+        "url": "https://api.maptiler.com/maps/bright-v2/{z}/{x}/{y}@2x.png?key=PmIF6Ez34ROeDo7jJGuD",
     },
     "city-lights": {
         "id": "city-lights",
         "iconImg": "/city-lights.png",
-        "url": "https://api.maptiler.com/maps/70207988-ec48-4dce-8172-230ff9375b7d/{z}/{x}/{y}@2x.png?key=fLxXsh3K0MP3y21i3bJs",
+        "url": "https://api.maptiler.com/maps/streets-v2-dark/{z}/{x}/{y}@2x.png?key=PmIF6Ez34ROeDo7jJGuD",
     },
     "ocean-tan": {
         "id": "ocean-tan",
         "iconImg": "/tan-ocean.png",
-        "url": "https://api.maptiler.com/maps/cd852295-1a11-4a53-a22b-995b2ded0e62/{z}/{x}/{y}@2x.png?key=fLxXsh3K0MP3y21i3bJs",
+        "url": "https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}@2x.png?key=PmIF6Ez34ROeDo7jJGuD",
     },
     "flag-back": {
         "id": "flag-back",
@@ -88,17 +88,17 @@ API_DICT = {
     "eco": {
         "id": "eco",
         "iconImg": "/eco.png",
-        "url": "https://api.maptiler.com/maps/c84b46cc-9714-4db6-b48e-92cb5057019d/{z}/{x}/{y}@2x.png?key=fLxXsh3K0MP3y21i3bJs",
+        "url": "https://api.maptiler.com/maps/outdoor-v2/{z}/{x}/{y}@2x.png?key=PmIF6Ez34ROeDo7jJGuD",
     },
     "blue-print": {
         "id": "blue-print",
         "iconImg": "/blue-print.png",
-        "url": "https://api.maptiler.com/maps/fc561f13-f2a7-4eb2-88bd-afc6f69f5c45/{z}/{x}/{y}@2x.png?key=fLxXsh3K0MP3y21i3bJs",
+        "url": "https://api.maptiler.com/maps/winter-v2/{z}/{x}/{y}@2x.png?key=PmIF6Ez34ROeDo7jJGuD",
     },
     "ruby-routes": {
         "id": "ruby-routes",
         "iconImg": "/ruby-routes.png",
-        "url": "https://api.maptiler.com/maps/a0ab4f04-819d-425b-9a79-f8a32d92cae1/{z}/{x}/{y}@2x.png?key=fLxXsh3K0MP3y21i3bJs",
+        "url": "https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}@2x.png?key=PmIF6Ez34ROeDo7jJGuD",
     },
 }
 
