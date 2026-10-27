@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Semplicita";
+  src: url("fonts/Semplicita-Modern-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.preview {
+  border: 0;
+}
+
+.poster-frame {
+  background: transparent;
+  padding-bottom: 0;
+  box-shadow: none;
+}
+
+.poster-frame.portrait {
+  width: min(100%, 552px);
+  aspect-ratio: 2 / 3;
+}
+
+.poster-frame.landscape {
+  width: min(100%, 828px);
+  aspect-ratio: 3 / 2;
+}
+
+.poster-frame #map {
+  inset: 0;
+}
+
+.poster-copy {
+  inset: auto auto auto 50%;
+  z-index: 500;
+  height: auto;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+  max-width: 90%;
+  overflow: hidden;
+  font-family: "Semplicita", sans-serif;
+  text-align: center;
+  pointer-events: none;
+}
+
+.poster-copy strong,
+.poster-copy span {
+  font-family: "Semplicita", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: normal;
+  white-space: nowrap;
+}
+
+.poster-copy span {
+  margin: 0;
+}

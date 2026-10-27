@@ -5,9 +5,9 @@ const styles = {
   "modern-light": style("bright-v2", "#000", "#fff"),
   "city-lights": style("streets-v2-dark", "#000", "#ffd900"),
   "ocean-tan": style("basic-v2", "#000", "#fff"),
-  eco: style("outdoor-v2", "#fff", "#000"),
-  "blue-print": style("winter-v2", "#fff", "#000"),
-  "ruby-routes": style("streets-v2", "#fff", "#000"),
+  eco: style("outdoor-v2", "#A7BEB5", "#044E33"),
+  "blue-print": style("winter-v2", "#D2DAE4", "#5D778E"),
+  "ruby-routes": style("streets-v2", "#FFFFFF", "#9C111F"),
 };
 
 function style(mapId, background, foreground) {
@@ -27,9 +27,11 @@ function style(mapId, background, foreground) {
 
 const titleInput = document.querySelector("#title");
 const subtitleInput = document.querySelector("#subtitle");
-const pinInput = document.querySelector("#pin");
 const styleInput = document.querySelector("#map-style");
 const frame = document.querySelector("#poster-frame");
+const copy = document.querySelector(".poster-copy");
+const previewTitle = document.querySelector("#preview-title");
+const previewSubtitle = document.querySelector("#preview-subtitle");
 const statusEl = document.querySelector("#job-status");
 const downloadEl = document.querySelector("#download");
 const generateButton = document.querySelector("#generate");
@@ -49,38 +51,56 @@ function replaceTiles() {
     attribution: "&copy; OpenStreetMap contributors · MapTiler",
   }).addTo(map);
   const colors = styles[styleInput.value].text.color;
-  document.querySelector(".poster-copy").style.background = colors.background;
-  document.querySelector(".poster-copy").style.color = colors.primary;
+  copy.style.background = colors.background;
+  previewTitle.style.color = colors.primary;
+  previewSubtitle.style.color = colors.coordinate;
 }
 replaceTiles();
 
+function dms(value, positive, negative) {
+  const absolute = Math.abs(value);
+  const degrees = Math.floor(absolute);
+  const minutesFloat = (absolute - degrees) * 60;
+  const minutes = Math.floor(minutesFloat);
+  const seconds = Math.round((minutesFloat - minutes) * 6000) / 100;
+  return `${value >= 0 ? positive : negative} ${degrees}°${minutes}'${seconds}"`;
+}
+
 function coordinates() {
-  const c = map.getCenter();
-  const lat = `${Math.abs(c.lat).toFixed(4)}° ${c.lat >= 0 ? "N" : "S"}`;
-  const lng = `${Math.abs(c.lng).toFixed(4)}° ${c.lng >= 0 ? "E" : "W"}`;
-  return `${lat} · ${lng}`;
+  const center = map.getCenter();
+  return `${dms(center.lat, "N", "S")} ${dms(center.lng, "E", "W")}`;
+}
+
+function sizeTextOverlay() {
+  const referenceWidth = orientation === "portrait" ? 552 : 828;
+  const scale = frame.clientWidth / referenceWidth;
+  copy.style.padding = `${8 * scale}px`;
+  copy.style.borderRadius = `${8 * scale}px`;
+  copy.style.bottom = `${23 * scale}px`;
+  previewTitle.style.fontSize = `${24 * scale}px`;
+  previewSubtitle.style.fontSize = `${8 * scale}px`;
 }
 
 function updatePreview({updateCoordinates = false} = {}) {
   if (updateCoordinates) subtitleInput.value = coordinates();
-  document.querySelector("#preview-title").textContent = (titleInput.value || "CUSTOM MAP").toUpperCase();
-  document.querySelector("#preview-subtitle").textContent = subtitleInput.value.toUpperCase();
-  document.querySelector("#preview-pin").hidden = !pinInput.checked;
+  previewTitle.textContent = titleInput.value || "CUSTOM MAP";
+  previewSubtitle.textContent = subtitleInput.value;
   document.querySelector("#zoom-readout").textContent = `ZOOM ${map.getZoom()} · ENGINE ${map.getZoom() + 2}`;
+  sizeTextOverlay();
 }
 
 map.on("moveend zoomend", () => updatePreview({updateCoordinates: true}));
 titleInput.addEventListener("input", () => updatePreview());
 subtitleInput.addEventListener("input", () => updatePreview());
-pinInput.addEventListener("change", () => updatePreview());
 styleInput.addEventListener("change", () => { replaceTiles(); updatePreview(); });
+new ResizeObserver(sizeTextOverlay).observe(frame);
 
 document.querySelectorAll("[data-format]").forEach((button) => button.addEventListener("click", () => {
   document.querySelectorAll("[data-format]").forEach((item) => item.classList.remove("active"));
   button.classList.add("active");
   orientation = button.dataset.format;
   frame.className = `poster-frame ${orientation}`;
-  setTimeout(() => map.invalidateSize(), 180);
+  setTimeout(() => { map.invalidateSize(); updatePreview({updateCoordinates: true}); }, 180);
 }));
 
 document.querySelector("#search").addEventListener("click", async () => {
@@ -92,7 +112,7 @@ document.querySelector("#search").addEventListener("click", async () => {
     const results = await response.json();
     if (!results.length) throw new Error("Place not found.");
     map.setView([Number(results[0].lat), Number(results[0].lon)], 10);
-    titleInput.value = query.split(",")[0].trim().toUpperCase();
+    titleInput.value = query.split(",")[0].trim();
     updatePreview({updateCoordinates: true});
     statusEl.textContent = "Place found. Pan and zoom to frame the exact print area.";
   } catch (error) {
@@ -106,16 +126,12 @@ function payload() {
   const dimensions = orientation === "portrait"
     ? {map_width: 24, map_height: 36, map_pixel_multiplier: 23}
     : {map_width: 36, map_height: 24, map_pixel_multiplier: 23};
-  const pinList = pinInput.checked ? [{
-    id: crypto.randomUUID(), size: 40, style: "circle-black-white",
-    position: {lat: center.lat, lng: center.lng},
-  }] : [];
   const bbox = JSON.stringify({
     _southWest: {lat: bounds.getSouth(), lng: bounds.getWest()},
     _northEast: {lat: bounds.getNorth(), lng: bounds.getEast()},
   });
   return [{
-    pinList,
+    pinList: [],
     center: [center.lat, center.lng],
     zoom: map.getZoom(),
     orientation,
